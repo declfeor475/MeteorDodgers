@@ -11,8 +11,6 @@ namespace MeteorDodgerssssss
         {
             InitializeComponent();
 
-            Cursor.Hide();
-
             // open the main menu for the game
             MenuScreen ms = new MenuScreen();
             this.Controls.Add(ms);
@@ -34,33 +32,6 @@ namespace MeteorDodgerssssss
                 ms.Location = new Point((this.Width - ms.Width) / 2, (this.Height - ms.Height) / 2);
             }
             #endregion
-        }
-
-        public static void ChangeScreen(UserControl current, string next)
-        {
-            //f is set to the form that the current control is on
-            Form f = current.FindForm();
-            f.Controls.Remove(current);
-            UserControl ns = null;
-
-            //all main screens
-            switch (next)
-            {
-                case "MenuScreen":
-                    ns = new MenuScreen();
-                    break;
-                case "GameScreen":
-                    ns = new GameScreen();
-                    break;
-                case "HowToPlayScreen":
-                    ns = new HowToPlayScreen();
-                    break;
-            }
-
-            //centres the control on the screen
-            ns.Location = new Point((f.Width - ns.Width) / 2, (f.Height - ns.Height) / 2);
-            f.Controls.Add(ns);
-            ns.Focus();
         }
     }
 }

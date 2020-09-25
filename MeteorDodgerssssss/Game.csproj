@@ -53,17 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class.cs" />
     <Compile Include="Screens\PauseForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Screens\PauseForm.designer.cs">
       <DependentUpon>PauseForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\HowToPlayScreen.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Screens\HowToPlayScreen.Designer.cs">
-      <DependentUpon>HowToPlayScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\MenuScreen.cs">
       <SubType>UserControl</SubType>
@@ -106,9 +101,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\MenuScreen.resx">
       <DependentUpon>MenuScreen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Screens\HowToPlayScreen.resx">
-      <DependentUpon>HowToPlayScreen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="Properties\Settings.settings">

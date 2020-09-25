@@ -13,12 +13,16 @@ namespace MeteorDodgerssssss
 
         private void playButton_Click(object sender, EventArgs e)
         {
-            MainForm.ChangeScreen(this, "GameScreen");
-        }
+            //f is the form this control is on - ("this" is the current User Control
+            Form f = this.FindForm();
+            f.Controls.Remove(this);
 
-        private void HowToPlayButton_Click_1(object sender, EventArgs e)
-        {
-            MainForm.ChangeScreen(this, "HowToPlayScreen");
+            // create an instance of the SecondScreen
+            GameScreen gs = new GameScreen();
+            gs.Location = new Point((f.Width - gs.Width) / 2, (f.Height - gs.Height / 2));
+
+            // Add the user control to the form
+            f.Controls.Add(gs);
         }
 
         private void exitButton_Click(object sender, EventArgs e)

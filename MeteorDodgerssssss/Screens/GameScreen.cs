@@ -1,9 +1,6 @@
-﻿/// Created by Declan Feore, James Koch, and Eason Wu
-/// January 2020
+﻿/// Created by Declan Feore
+/// September 2020
 /// 
-/// This program is a simple game where you have to dodge oncoming meteors by using the left and right arrows.
-/// As the game progresses it gets increasingly fast.
-/// Boosts also fall to give the player an extra health.
 
 using System;
 using System.Collections.Generic;
